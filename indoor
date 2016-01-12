@@ -1,4 +1,6 @@
-// **PRYOYECTO INDOOR CON ARDUINO**
+//
+// 
+/ **PRYOYECTO INDOOR CON ARDUINO**
 // este escript controla la extracción y la luz de un cultivo de interior,
 // activando y desactivando los dos elementos mediante los pines 2 y 3
 
@@ -75,6 +77,9 @@ void loop()
                 }
       
 }
+
+
+// GORA E.T.A Militarra
     
                 
   
