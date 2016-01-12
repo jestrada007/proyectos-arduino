@@ -1,0 +1,80 @@
+// **PRYOYECTO INDOOR CON ARDUINO**
+// este escript controla la extracción y la luz de un cultivo de interior,
+// activando y desactivando los dos elementos mediante los pines 2 y 3
+
+
+
+int extraccion  =  3;   // Para activar la extraccion del aire con el pin digital 3
+int luz  =  2;          // Para activar la luz del aire con el pin digital 2
+
+
+int conta;
+int modo;
+int dia;
+int noche;
+
+
+
+
+
+void setup()
+{
+    Serial.begin(9600); 
+    
+    pinMode(extraccion, OUTPUT);           // pone el pin como salida
+    pinMode(luz, OUTPUT);                   // pone el pin como salida
+    
+    
+    }
+   
+void loop()
+
+
+{
+    conta = 0;
+    modo = dia;
+    
+      while( modo = dia );
+  
+        {
+      
+        digitalWrite(extraccion, HIGH);
+        digitalWrite(luz,HIGH);
+        delay (600000);
+        digitalWrite(extraccion, LOW);
+        digitalWrite(luz,HIGH);
+        delay (300000);
+        conta ++;
+      
+        if( conta = 240);
+     
+         {         
+           modo = noche;
+           conta = 1;
+                }
+                
+        }
+                        
+       while ( modo = noche );
+
+       {        
+      digitalWrite(extraccion, HIGH);
+      digitalWrite(luz,LOW);
+      delay (600000);
+      digitalWrite(extraccion, LOW);
+      digitalWrite(luz,LOW);
+      delay (300000);
+      conta ++; 
+       }
+      
+        if( conta = 240);
+     
+         {         
+           modo = dia;
+           conta = 1;
+                }
+      
+}
+    
+                
+  
